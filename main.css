@@ -605,6 +605,10 @@ div#footer #footer-places li {
     div#footer #footer-icons {
         padding: .5em 20px!important
     }
+    #bitcoin.card:after,
+    #monero.card:after {
+        display: none;
+    }
 }
 
 @media (min-width:1400px) {
