@@ -35,7 +35,7 @@
                 <a class="mw-wiki-logo" href="https://starcitizen.tools" target="_blank" title="Visit the main page"></a>
             </div>
             <div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
-                <h3 id="p-navigation-label">Projects</h3>
+                <h3 id="p-navigation-label">Our Projects</h3>
                 <div class="body">
                     <ul>
                         <li id="n-mainpage-description" class="waves-effect"><a href="https://starcitizen.tools" target="_blank" accesskey="z">Star Citizen Wiki</a></li>
@@ -63,13 +63,74 @@
     </header>
     <main class="main">
         <div id="content">
-
             <p>Hello users of StarCitizen.tools, members of the <a href="https://reddit.com/r/starcitizen" target="_blank">/r/starcitizen subreddit</a>, and interested parties!</p>
             <p>Since October 2016 we have been trying to provide the community a better and ad-free online encyclopedia of all things Star Citizen. In a year we have grown from nothing to 2,408 content pages and 667 registered users and have served over a million page views to users. All thanks to a dedicated team who have been working on it during their spare time.
             </p>
             <p>Now are we asking for your support so we can keep growing and keep the site ad-free.
             </p>
 
+            <div class="card-row">
+                <div class="row-wrapper">
+                    <div class="card" id="coinhive">
+                        <!--#mining-monitor-->
+                        <div id="miner" class="row">
+                            <div id="mining-stats-container" class="twelve columns stopped">
+                                <canvas id="mining-stats-canvas"></canvas>
+                                <div id="mining-controls">
+                                    <a href="#" class="mining-button" id="mining-start">Start Mining</a>
+                                    <!--#mining-start-->
+                                    <a href="#" class="mining-button" id="mining-stop">
+											<svg class="mining-icon pause-button" viewBox="0 0 200 200" alt="Pause">
+												<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" class="mining-stroke"/>
+												<rect x="70" y="50" width="20" height="100" class="mining-fill"/>
+												<rect x="110" y="50" width="20" height="100" class="mining-fill"/>
+											</svg>
+										</a>
+                                    <!--#mining-stop-->
+                                </div>
+                                <!--mining-controls-->
+                            </div>
+                            <!--#mining-stats-container-->
+                        </div>
+                        <div id="mining-monitor" class="row">
+                            <div>
+                                <span class="number-label">Hashes/s</span>
+                                <span id="mining-hashes-per-second">0.0</span>
+                            </div>
+                            <!--four colmns-->
+                            <div>
+                                <span class="number-label">Total</span>
+                                <span id="mining-hashes-total">0</span>
+                            </div>
+                            <!-- four columns -->
+                            <div>
+                                <span class="number-label">Threads</span>
+                                <span>
+                                    <span id="mining-threads">1</span>
+                                    <span id="mining-threads-add" class="action">+</span>
+                                    <span class="mining-divide"> / </span>
+                                    <span id="mining-threads-remove" class="action">−</span>
+                                </span>
+                            </div>
+                            <!--four columns-->
+                        </div>
+                        <!--#miner"-->
+                    </div>
+                    <div class="card" id="paypal">
+                        <a href="https://www.paypal.me/StarCitizenTools" target="_blank" title="Paypal">Paypal</a>
+                    </div>
+                    <div class="card" id="bitcoin">
+									<a href="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u" target="_blank" title="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u">
+									bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u</a>
+                    </div>
+                    <div class="card" id="monero">
+                        <a href="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3" target="_blank" title="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="caution"><strong>Caution:</strong><br /> This type of coin mining can be CPU intensive. May drain batteries and run up CPU temps. Be careful and adjust the number of threads to fit your particular situation. Running too many threads can cause your computer/device to become slow.</p>
+            
             <h2>Donation FAQ</h2>
             <div class="faq-panel">
                 <h3>Why does Star Citizen Tools need donations?</h3>
@@ -84,73 +145,6 @@
                     <p>50% would be held in reserve for future costs & projects, while the remaining 50% would used to reimburse for services used at CZenStar’s data center.</p>
                 </div>
             </div>
-            <!-- .faq-panel -->
-
-            <h2>Currently available methods of donation:</h2>
-
-            <h3>Donate CPU Cycles by Mining Monero</h3>
-            <div id="mining-ui-wrapper">
-                <div id="mining-monitor" class="row">
-                    <div class="four columns">
-                        <h4 class="number-label">Hashes/s</h4>
-                        <h4 id="mining-hashes-per-second">0.0</h4>
-                    </div>
-                    <!--four colmns-->
-                    <div class="four columns">
-                        <h4 class="number-label">Total</h4>
-                        <h4 id="mining-hashes-total">0</h4>
-                    </div>
-                    <!-- four columns -->
-                    <div class="four columns">
-                        <h4 class="number-label">Threads</h4>
-                        <h4>
-                            <span id="mining-threads">1</span>
-                            <span id="mining-threads-add" class="action">+</span>
-                            <span class="mining-divide"> / </span>
-                            <span id="mining-threads-remove" class="action">−</span>
-                        </h4>
-                    </div>
-                    <!--four columns-->
-                </div>
-                <!--#mining-monitor-->
-                <div id="miner" class="row">
-                    <div id="mining-stats-container" class="twelve columns stopped">
-                        <canvas id="mining-stats-canvas"></canvas>
-                        <div id="mining-controls">
-                            <a href="#" class="mining-button" id="mining-start">
-											<svg class="mining-icon play-button" viewBox="0 0 200 200" alt="Start Mining">
-												<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" class="mining-stroke"/>
-												<polygon points="70, 55 70, 145 145, 100" class="mining-fill"></polygon>
-											</svg>
-											Start Mining
-										</a>
-                            <!--#mining-start-->
-                            <a href="#" class="mining-button" id="mining-stop">
-											<svg class="mining-icon pause-button" viewBox="0 0 200 200" alt="Pause">
-												<circle cx="100" cy="100" r="90" fill="none" stroke-width="15" class="mining-stroke"/>
-												<rect x="70" y="50" width="20" height="100" class="mining-fill"/>
-												<rect x="110" y="50" width="20" height="100" class="mining-fill"/>
-											</svg>
-										</a>
-                            <!--#mining-stop-->
-                        </div>
-                        <!--mining-controls-->
-                    </div>
-                    <!--#mining-stats-container-->
-                </div>
-                <!--#miner"-->
-
-                <div id="powered-by-wrapper" class="row">
-                    <h4>Mining Powered by:</h4>
-                    <ul>
-                        <li><a href="https://coinhive.com" target="_blank" title="CoinHive"><img height="32" src="media/coinhive-icon.png" /></a></li>
-                        <li><a href="https://getmonero.org" target="_blank" title="Monero"><img height="32" src="media/monero-logo.png" /></a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <!--#mining-ui-wrapper-->
-            <p><strong>Caution:</strong><br /> This type of coin mining can be CPU intensive. May drain batteries and run up CPU temps. Be careful and adjust the number of threads to fit your particular situation. Running too many threads can cause your computer/device to become slow.</p>
 
             <h3>Coin Mining FAQ</h3>
             <div class="faq-panel">
@@ -180,28 +174,6 @@
 
             <h3>Paypal</h3>
             <p><strong><em><a href="https://www.paypal.me/StarCitizenTools" target="_blank">PayPal.me</a></em></strong></p>
-
-            <h3>Bitcoin</h3>
-            <div align="center" valign="middle" id="mining-ui-wrapper">
-                <h4>Mobile Wallet QR Code</h4>
-                <span><a href="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u" target="_blank" title="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u">
-									<img height="240" width="240" alt="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u" src="media/bitcoin-qr.png" /></a>
-									<br />
-									<a href="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u" target="_blank" title="bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u">
-									bitcoin:1MG4c1C9xbzZP5HE6npy9446CmvhDr347u</a></span>
-            </div>
-            <!-- #mining-ui-wrapper -->
-
-            <h3>Monero</h3>
-            <div align="center" valign="middle" id="mining-ui-wrapper">
-                <h4>Mobile Wallet QR Code</h4>
-                <span><a href="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3" target="_blank" title="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3">
-									<img height="240" width="240" alt="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3" src="media/monero-qr.png" /></a>
-									<br />
-									<a href="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3" target="_blank" title="monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3">
-									monero:463oGAgc3EqGjJ8GvYehK7RZc1dmffbZWW3jvEX9wqtVb6oNtXDtay6Vvj8cora <br /> 74Sj6Pb81dyaxeJtMvj8pXkoPJbnhPg3</a></span>
-            </div>
-            <!-- #mining-ui-wrapper -->
         </div>
         <!--#content-->
     </main>
