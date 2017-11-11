@@ -398,7 +398,7 @@ div#footer ul {
     border-radius: 2px;
     background: #fff;
     width: 226px;
-    height: 20rem;
+    height: 4rem;
     margin-left: 8px;
     overflow: hidden;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
@@ -440,7 +440,7 @@ div#footer ul {
     background: linear-gradient(180deg, #ff9600 0, #fdd835 100%)
 }
 
-#coinhive a#mining-start {
+#coinhive a {
     background-image: url(media/coinhive.svg)
 }
 
