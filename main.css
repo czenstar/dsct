@@ -526,7 +526,9 @@ div#footer ul {
 }
 
 div#footer {
-    background: #546e7a
+    background: #546e7a;
+    position: relative;
+    z-index: 99999;
 }
 
 div#footer #footer-info li {
